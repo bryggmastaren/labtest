@@ -7,36 +7,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Forecast</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Oxygen:wght@300;400;700&display=swap"
+        rel="stylesheet">
 </head>
 
+<!-- lägger id på body så vi kan target med getelementbyid i js-koden-->
+
 <body id="body">
-    <h1>Väder för olika städer</h1>
+    <main id="main-container">
+        <h1 id="cityName"></h1>
+        <p id="todayDate"></p>
 
-    <!-- sökrutan och knappen-->
-    <input type="text" id="cityInput" placeholder="Välj stad">
-    <button onclick="fetchWeather()">Sök</button>
+        <!-- sökrutan och knappen-->
+        <section id="search">
+            <form>
+                <input type="text" id="cityInput" placeholder=" Välj stad"
+                    aria-label="Skriv in staden du vill se vädret på">
+                <button class="button" type="button" onclick="fetchWeather()">Sök</button>
+            </form>
+        </section>
 
-    <h1>Dagens väder</h1>
-    <div id="temperature"></div>
-    <div id="todayDate"></div>
-    <div id="sun"></div>
-    <div id="relHum"></div>
-    <div id="prec"></div>
-    <div id="rain"></div>
-    <div id="showers"></div>
-    <div id="wind"></div>
-    <!--
-    <div class="container">
-        <div class="title-bar">Weather Forecast</div>
-        <div class="search-container">
-            <div class="search-bar">
-                <input type="text" id="city-input" placeholder="Enter a city">
-                <button class="search-btn">Search</button>
+        <section id="weatherDetails">
+
+            <!--lägg in weathercode grej här -->
+            <p id="temp"></p>
+            <div id="weatherIcon">
+                <img id="icon" src="" alt="Weather Icon" />
             </div>
-            <div class="weather-container" class="weather-container"> -->
-    </div>
-    </div>
-    </div>
+            <p id="weatherDescription">
+            </p>
+            <p id="sun"></p>
+            <p id="relHum"></p>
+            <p id="prec"></p>
+            <p id="rain"></p>
+            <p id="showers"></p>
+            <p id="wind"></p>
+
+            <!-- väder-ikonen -->
+        </section>
+        </div>
+        </div>
+        </div>
+    </main>
     <!-- javascriptkoden laddas efter html innehållet är klart så fetchweather inte returnerar undefined-->
     <script src="script.js" defer></script>
 </body>
