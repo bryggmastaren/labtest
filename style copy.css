@@ -1,0 +1,144 @@
+* {
+  font-family: "Oxygen", sans-serif;
+  font-weight: 400;
+}
+@media only screen and (max-width: 350px) {
+  #main-container {
+    backdrop-filter: blur(20px);
+    background: rgb(0, 0, 0, 0.15);
+    margin: 0rem 14rem;
+  }
+}
+.oxygen-light {
+  font-family: "Oxygen", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.oxygen-regular {
+  font-family: "Oxygen", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.oxygen-bold {
+  font-family: "Oxygen", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+h1 {
+  font-size: 5rem;
+}
+p {
+  font-size: 1.2rem;
+}
+/* väderikonerna */
+#icon {
+  max-width: 50px;
+  max-height: 50px;
+  padding: 1vh;
+}
+
+#body {
+  margin-top: 2vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: "ZtChintzy", sans-serif;
+}
+
+/* central piece */ /* implementera på bilder på flow sen om du har tid*/
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Content */
+#main-container {
+  backdrop-filter: blur(20px);
+  background: rgba(255, 180, 60, 0.3);
+  width: 100%;
+}
+#weatherDetails {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: rgb(0, 0, 0, 0.4);
+  padding: 0rem 2rem 2rem;
+  width: 100%;
+}
+h2 {
+  margin: 3rem 0rem;
+}
+#weatherData div {
+  margin: 1.2rem 0rem; /* padding mellan weatherdata divsen */
+}
+#weatherDetails {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1;
+  grid-template-areas:
+    "temp date"
+    "weatherDescription weatherIcon"
+    "sun humidity"
+    "prec rain"
+    "showers wind";
+  gap: 1rem;
+  margin: 4rem;
+}
+#weatherDescription {
+  grid-area: weatherDescription;
+  background-color: rgba(255, 233, 39, 0.592);
+}
+#weatherIcon {
+  grid-area: weatherIcon;
+  background-color: rgba(255, 233, 39, 0.592);
+}
+#temp {
+  grid-area: temp;
+  display: flex;
+  font-size: 7rem;
+  background-color: rgb(0, 0, 0, 0.15);
+  justify-content: left;
+}
+
+#todayDate {
+  grid-area: date;
+  background-color: rgba(0, 170, 255, 0.384);
+  align-content: center;
+}
+
+#sun {
+  grid-area: sun;
+  background-color: rgba(0, 255, 38, 0.384);
+}
+
+#relHum {
+  grid-area: humidity;
+  background-color: rgba(251, 8, 255, 0.384);
+}
+
+#prec {
+  grid-area: prec;
+  background-color: rgba(225, 255, 0, 0.384);
+}
+
+#rain {
+  grid-area: rain;
+  background-color: rgba(102, 25, 255, 0.384);
+}
+
+#showers {
+  grid-area: showers;
+  background-color: rgba(255, 118, 6, 0.384);
+}
+
+#wind {
+  grid-area: wind;
+  background-color: rgba(0, 255, 119, 0.384);
+}
+
